@@ -1,14 +1,14 @@
-#Development Portfolio
+# Development Portfolio
 
-  I worked on the checkpoint and respawn system, the enemy system and the collectible and level change system in our project. These tasks required creating custom game modes and game states as well as editing each level blueprint to accommodate the use of simple cinimatics for the player deaths and level changes. 
+I worked on the checkpoint and respawn system, the enemy system and the collectible and level change system in our project. These tasks required creating custom game modes and game states as well as editing each level blueprint to accommodate the use of simple cinimatics for the player deaths and level changes. 
+ 
+Some of the biggest challenges were incorporating the use of cinimatics as transitions. I could find no c++ code examples to help me understand how to implement them. I did find simple blueprint examples, and was able to rework the collectible and enemy systems to incorrporate the use of blueprints. I also had trouble with the level system, as game state is not preserved across levels, this made it difficult to set up a more abstract level change system. In the end, I made the level change system hard coded in each level blueprint.
 
-2. Some of the biggest challenges were incorporating the use of cinimatics as transitions.  I could find no c++ code examples to help me understand how to implement them. I did find simple blueprint examples, and was able to rework the collectible and enemy systems to incorrporate the use of blueprints. I also had trouble with the level system, as game state is not preserved across levels, this made it difficult to set up a more abstract level change system. In the end, I made the level change system hard coded in each level blueprint.
+Below is a diagram showing the basic structure of the systems I implemented. 
 
-3.
+I found two tutorials extremly helpful in my work on our project. The first, was a youtube tutorial series that does an excellent explanation of the use of game modes and game states in its fifth episode. [Here](https://www.youtube.com/watch?v=3JpNil0_gm4&list=RDCMUCpsN2TfWGmun4peN2IPgcKg&start_radio=1&t=1) is a link to the first episode.  I found the entire tutorial veyr useful.
 
-4.
+The second tutorial I found useful was a whole website [Found Here](https://unrealcpp.com/). Unreal c++ was super useful. He breaks down concepts into bite sized video's that help with a lot of beginner to intermediate code.  
 
-5. (links to the tutorials)
-
-  We chose Perforce as our version control system. None of the team members had prior experience with Perforce before this project. We did not have a great experience with Perforce. I found it difficult to use and not intuitive to learn with previous experience with git. The largest difficulties we had with Perforce came from the file locking system. At least within our understanding, once a file is locked,
+We chose Perforce as our version control system. None of the team members had prior experience with Perforce before this project. We did not have a great experience with Perforce. I found it difficult to use and not intuitive to learn with previous experience with git. The largest difficulties we had with Perforce came from the file locking system. At least within our understanding, once a file is locked,
 there is no way to unlock it without either submitting a changelist or reverting the file. If there are local changes this can be difficult. We also experienced that the  file locking system will not prevent a user from submitting changes to that file, but the file will not be changed. This caused some serious distruption at one point during our project where I myself pushed changes that ended up not compiling for all other members of our team. The biggest problem with this was that perforce gave me no warning that this file would be overwritten. From my end, everything seemed fine. I also personally had a hard time adjusting to the P4v interface. I know there is command line tool, but since the rest of my team was using the editor I felt it maded more senes to work in the same environment as them. I know not everyone prefers the command line, but in my personal experience with git the command line is far easier to work with and understand.
